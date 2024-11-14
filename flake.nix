@@ -49,15 +49,8 @@
         import inputs.nixfigs-helpers.helpers.devShells { inherit pkgs self system; }
       );
 
-      oci = let
-        pkgs = genPkgs "x86_64-linux";
-        inherit (pkgs) lib;
-      in rec { };
-      libvirt = let
-        pkgs = genPkgs "x86_64-linux";
-      in rec { };
-      nspawn = let
-      pkgs = genPkgs "x86_64-linux";
-      in rec { };
+      oci = rec { };
+      libvirt = rec { };
+      nspawn = rec { };
     };
 }
