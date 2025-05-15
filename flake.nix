@@ -1,11 +1,6 @@
 {
   description = "Virtual machines repository for my NixOS flakes (public)";
 
-  nixConfig = {
-    extra-trusted-substituters = ["https://cache.nixos.org/"];
-    extra-trusted-public-keys = ["cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="];
-  };
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.11";
     nixfigs-helpers.url = "github:shymega/nixfigs-helpers";
