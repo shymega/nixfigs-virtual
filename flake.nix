@@ -6,7 +6,7 @@
     nixfigs-helpers.url = "github:shymega/nixfigs-helpers";
   };
 
-  outputs = {nixpkgs, ...} @ inputs: let
+  outputs = inputs: let
     inherit (inputs) self;
     genPkgs = system: import inputs.nixpkgs {inherit system;};
     systems = ["x86_64-linux"];
@@ -20,7 +20,7 @@
     );
   in rec {
     # for `nix fmt`
-    formatter = treeFmtEachSystem (pkgs: treeFmtEval.${pkgs.system}.config.build.wrapper);
+    formatter = treeFmtEachSystem (pkgs: treeFmtEval.${pkgs.stdenv.hostPlatform.system}.config.build.wrapper);
     # for `nix flake check`
     checks =
       treeFmtEachSystem (pkgs: {
