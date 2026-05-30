@@ -2,7 +2,7 @@
   description = "Virtual machines repository for my NixOS flakes (public)";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-26.05";
     nixfigs-helpers.url = "github:shymega/nixfigs-helpers";
   };
 
