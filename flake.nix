@@ -3,7 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-26.05";
-    nixfigs-helpers.url = "github:shymega/nixfigs-helpers";
+    nixfigs-helpers = {
+      url = "github:shymega/nixfigs-helpers";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: let
