@@ -2,7 +2,8 @@
   description = "Virtual machines repository for my NixOS flakes (public)";
 
   inputs = {
-    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/*";
+    nixfigs-pkgs.url = "github:shymega/nixfigs-pkgs";
+    nixpkgs.follows = "nixfigs-pkgs/nixpkgs";
     nixfigs-helpers = {
       url = "github:shymega/nixfigs-helpers";
       inputs.nixpkgs.follows = "nixpkgs";
